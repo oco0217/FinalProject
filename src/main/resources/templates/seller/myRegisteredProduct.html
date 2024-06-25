@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{header :: header}"></th:block>
+<head>
+    <title>등록한 상품들</title>
+    <link rel="stylesheet" th:href="@{/dist/css/myRegisteredProduct.css}">
+</head>
+
+
+<body id="registeredBody">
+
+
+<div class="content-title">
+    <p>[[${session.shopName}]]([[${session.id}]]) 님께서 등록한 상품 목록</p>
+
+<div class="note-information">
+    <p>상품에 대한 수정 또는 삭제, 문의사항은</p>
+    <p>1577 - 1234 로 상담사를 통해 문의바랍니다.</p>
+</div>
+
+</div>
+
+<div class="product-register-box">
+
+    <button id="reload">새로고침</button>
+
+    <img src="/dist/image/상품등록.jpg" alt="" style="width: 240px; height: auto">
+    <a href="/product/register">상품등록하기</a>
+</div>
+
+<div id="spreadLine">
+
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <div class="close-box">
+        <span class="update-modal-close" onclick="closeModal()">&times;</span>
+        </div>
+        <div id="modalContent"></div>
+    </div>
+</div>
+<script th:inline="javascript">
+    const sellerId = [[${session.id}]];
+</script>
+<script th:src="@{/js/myRegisteredProduct.js}"></script>
+
+<script>spreadMyRegisteredProductList(sellerId);</script>
+</body>
+
+<th:block th:replace="~{footer :: footer}"></th:block>

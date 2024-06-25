@@ -1,0 +1,279 @@
+@font-face {
+    font-family: 'NotoSans KR';
+    src: url("../font/Noto_Sans_KR/NotoSansKR-VariableFont_wght.ttf");
+}
+
+#myBasketBody {
+    font-family: 'NotoSans KR', serif;
+    width: 100%;
+    position: relative;
+}
+
+.basket1 {
+    /*background-color: aqua;*/
+    margin: 40px auto 100px;
+    width: 1400px;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.basketTitle {
+    text-align: center;
+    margin: 50px;
+}
+
+.title1 {
+    font-size: 30px;
+    font-weight: 550;
+}
+
+.basket3 {
+    /*background-color: pink;*/
+    width: 62%;
+    min-height: 300px;
+    margin-right: 57px;
+}
+
+a {
+    color: black;
+}
+
+.text1 {
+    /* margin-left: 10px;
+    margin-right: 10px; */
+}
+
+.text2 {
+    margin-left: 20px;
+    font-size: 15px;
+    color: black;
+    font-weight: 400;
+}
+
+/*hr {*/
+/*    border: 1px solid black;*/
+/*}*/
+
+.basket4 {
+    background-color: rgba(211, 211, 211, 0.155);
+    margin-top: 32px;
+    width: 350px;
+    height: 400px;
+    position: sticky;
+    top: 300px;
+    right: 156px;
+    bottom: 0;
+}
+
+.basket5 {
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.text3,
+.text4,
+.text5,
+.text7 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.text6,
+.text8 {
+    text-align: right;
+    /*margin: 45px 0 30px;*/
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.text7 {
+    margin-top: 50px;
+}
+
+.basket6 {
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    background-color: orange;
+    line-height: 50px;
+    border-radius: 5px;
+    margin: 31px auto 6px;
+}
+
+.basket7 {
+    background-color: white;
+    width: 300px;
+    height: 30px;
+}
+
+.text9 {
+    font-size: 20px;
+    font-weight: 550;
+    color: white;
+}
+
+.accumulate {
+    background-color: orange;
+    border-radius: 99px;
+    padding: 3px;
+    margin-right: 5px;
+    color: white;
+}
+
+.basket8 {
+    /* background-color: aqua; */
+    padding-top: 30px;
+    padding-left: 4px;
+}
+
+.text10,
+.text11 {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+#basketList {
+    /*background-color: yellow;*/
+    width: 100%;
+    min-height: 300px;
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+#basketList > .basketList-li{
+    width: 100%;
+    height: 121px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    /*background-color: violet;*/
+    margin: 0 auto 34px;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+}
+.product-image-box{
+    width: 11%;
+    height: 100%;
+}
+.product-image-box img{
+    width: 62px;
+    height: auto;
+}
+.product-desc-box{
+    /*background-color: #055160;*/
+    width: 60%;
+    height: 100%;
+    margin-top: 10px;
+}
+.product-desc-box p:first-child{
+    margin-top: 11px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.product-desc-box p:last-child{
+    color: rgb(153, 153, 153);
+    font-size: 14px;
+    margin-top: 8px;
+}
+.calc-box{
+    width: 100px;
+    height: 30px;
+    margin-top: 25px;
+    margin-right: 20px;
+    /*background-color: #03c75a;*/
+}
+.product-price-box{
+    width: 15%;
+    height: 100%;
+    /*background-color: red;
+    justify-content: space-evenly;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 75px;
+    position: relative;
+}
+
+.product-price-box s{
+    position: absolute;
+    top: 25px;
+    left: 37px;
+}
+
+
+
+.name1 {
+    /* background-color: aliceblue; */
+    width: 400px;
+    height: 100px;
+    line-height: 100px;
+}
+
+.box1 {
+    /* background-color: pink; */
+    width: 100px;
+    height: 100px;
+    /* line-height: 100px; */
+    text-align: center;
+    display: flex;
+}
+
+.box2 {
+    width: 40px;
+    height: 100px;
+    line-height: 25px;
+    /* background-color: yellow; */
+}
+
+.price {
+    /* background-color: aqua; */
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: right;
+    margin-left: 20px;
+}
+
+/* input 초기화 */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* (체크박스, 텍스트) 정렬 맞추기 */
+.checkbox_label {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+/* 체크박스 디자인 */
+.checkbox_icon::before {
+    content: "";
+    margin-right: 12px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid #9da3a5;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+}
+
+/* checked */
+.checkbox_label input:checked + .checkbox_icon::before {
+    /*   transition: all 0.15s ease; */
+    background: url(https://intranet.adef.co.kr/asset/images/ic_check.png) orange no-repeat center;
+    border: none;
+}
+
+.calc-box button {
+    border: 1px solid lightgray;
+    background-color: rgba(211, 211, 211, 0.174);
+    width: 30px;
+    height: 30px;
+    align-items: center;
+}

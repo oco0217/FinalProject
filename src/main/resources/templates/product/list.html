@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{header :: header}"></th:block>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @font-face {
+            font-family: 'NotoSans KR';
+            src: url("/dist/font/Noto_Sans_KR/NotoSansKR-VariableFont_wght.ttf");
+        }
+
+        #list-body {
+            /* 컨텐츠 보호를 위해 사용 */
+            min-width: 1200px;
+            width: 100%;
+            font-family: "NotoSans KR",serif;
+        }
+
+        a span {
+            color: black;
+        }
+        a p {
+            color: black;
+        }
+
+        .listNavbar {
+            height: 30px;
+             /*background-color: aqua;*/
+            display: flex;
+            justify-content: end;
+            padding: 10px 30px;
+            margin-top: 23px;
+            margin-right: 266px;
+        }
+
+        .listNavbar > a {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 60px;
+            color: black;
+        }
+
+        .listNavbar > ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .listNavbar > ul > li {
+            height: 30px;
+            margin: auto 10px;
+        }
+
+        .listNavbar > ul > li > a {
+            color: #999999;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .listNavbar > ul > li > a:hover {
+            color: rgb(163, 153, 141);
+        }
+
+        .title {
+            text-align: center;
+            margin: 70px 0;
+            font-size: 30px;
+            font-weight: 550;
+        }
+
+        .count {
+            margin-top: 5px;
+        }
+
+
+
+        .productList-container {
+            width: 940px;
+            min-height: 540px;
+            /*background-color: aqua;*/
+            margin: 11px auto 14px;
+            display: flex;
+            justify-content: start;
+            position: relative;
+        }
+        .productList-container > ul {
+            padding: 0;
+            width: 940px;
+            min-height: 540px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .productList-container > ul > li {
+            width: 294px;
+            height: 525px;
+            margin-top: 68px;
+            display: flex;
+            flex-direction: column;
+            /*border: 1px solid violet;*/
+        }
+        .image-box{
+            overflow: hidden;
+        }
+
+        .image-box > .product-image{
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .productList-container > ul > li .product-image:hover {
+            transform: scale(1.01);
+            filter: brightness(1.05);
+        }
+
+        /*장바구니 담기*/
+        .basket-button {
+            width: 100%;
+            height: 36px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 6px;
+            line-height: 30px;
+            font-size: 16px;
+            color: black;
+            background-color: white;
+        }
+
+        .basket-button > .cart-image {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        .product-desc-text{
+            padding-top: 8px;
+            width: 100%;
+            height: 111px;
+        }
+
+        .product-name-text{
+            margin: 6px 0 11px ;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+        .product-sm-text{
+            margin: 6px 0 11px;
+            font-size: 13px;
+            font-weight: 400;
+            color: rgb(153, 153, 153);;;
+        }
+        .discountRate-text{
+            color: rgb(250, 98, 47);
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .no-discount-price{
+            text-decoration: line-through;
+            color: rgb(181, 181, 181);
+            font-size: 14px;
+            padding-top: 2px;
+        }
+        .product-real-price-text{
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .review-text{
+            padding-top: 12px;
+            font-size: 13px;
+            color: rgb(153, 153, 153);;
+        }
+
+
+        .pagination-box{
+            margin-top: 78px;
+            display: flex;
+            justify-content: center;
+            /*background-color: #0a58ca;*/
+        }
+        #searchValPrint{
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin: 70px 0;
+        }
+        .memberShip {
+            position: fixed;
+            top: 50%;
+            left: 65px;
+            transform: translateY(-50%);
+        }
+
+        .memberShip > a > img {
+            width: 140px;
+            height: 480px;
+        }
+
+        .rightBanner {
+            position: fixed;
+            top: 50%;
+            right: 110px;
+            transform: translateY(-50%);
+            border: 1px solid lightgray;
+            width: 100px;
+            background-color: white;
+            text-align: center;
+            border-radius: 15px;
+            font-family: 'NanumSquareRoundL';
+            font-size: small;
+            padding-bottom: 10px;
+        }
+
+        .rightBanner hr {
+            margin: 5px 0;
+        }
+
+        .rightBanner a {
+            color: black;
+            cursor: pointer;
+        }
+        .rightBanner > a:visited {
+            color: black;
+        }
+
+        .rightBanner > a > img {
+            display: block;
+            margin: 5px auto;
+        }
+
+        .RecentlyViewed > p {
+            margin: 10px auto;
+        }
+        .pagination .page-item.active .page-link {
+            background-color: orange;
+            border-color: orange;
+            color: white;
+        }
+        .pagination .page-link {
+            color: black;
+        }
+
+        .pagination .page-link:hover {
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body id="list-body">
+<div id="searchValPrint" style="display: none"></div>
+
+<th:block th:if="${ph.pgvo.search == null or ph.pgvo.search == ''}">
+<div class="title">
+    <span>[[${ph.pgvo.description}]]</span>
+</div>
+</th:block>
+
+<div class="listNavbar">
+    <span class="count"></span>
+    <ul>
+        <li><a id="new" class="subType-link" th:href="@{/product/list(type=${ph.pgvo.type},category=${ph.pgvo.category}, categoryDetail=${ph.pgvo.categoryDetail},subType='new',search=${ph.pgvo.search})}">신상품순</a></li>
+        <li><a id="famous" class="subType-link" th:href="@{/product/list(type=${ph.pgvo.type},category=${ph.pgvo.category}, categoryDetail=${ph.pgvo.categoryDetail},subType='famous',search=${ph.pgvo.search})}">인기순</a></li>
+        <li><a id="manyReview" class="subType-link" th:href="@{/product/list(type=${ph.pgvo.type},category=${ph.pgvo.category}, categoryDetail=${ph.pgvo.categoryDetail},subType='manyReview',search=${ph.pgvo.search})}">리뷰 많은순</a></li>
+        <li><a id="expensive" class="subType-link" th:href="@{/product/list(type=${ph.pgvo.type},category=${ph.pgvo.category}, categoryDetail=${ph.pgvo.categoryDetail},subType='expensive',search=${ph.pgvo.search})}">높은 가격순</a></li>
+        <li><a id="cheap" class="subType-link" th:href="@{/product/list(type=${ph.pgvo.type},category=${ph.pgvo.category}, categoryDetail=${ph.pgvo.categoryDetail},subType='cheap',search=${ph.pgvo.search})}">낮은 가격순</a></li>
+    </ul>
+</div>
+
+<div class="productList-container">
+    <ul>
+        <th:block th:each="list:${list}">
+            <li>
+                <a th:href="@{/product/detail(id=${list.id})}">
+                    <div class="image-box">
+                        <img class="product-image" th:src="${list.mainImage}" alt="">
+                    </div>
+                    <button class="basket-button" th:attr="data-productId=${list.id}">
+                        <img class="cart-image" th:src="@{/dist/icon/cart.png}" alt="" style="margin-top: 3px">담기
+                    </button>
+
+                    <div class="product-desc-text">
+
+                        <p class="product-name-text">[[${list.name}]]</p>
+                        <p class="product-sm-text">[[${list.description}]]</p>
+
+                        <th:block th:if="${list.discountRate != 0}">
+                            <p class="no-discount-price" th:text="${#numbers.formatDecimal(list.price, 0, 'COMMA', -1, 'POINT')} + ' 원'"></p>
+                            <span class="discountRate-text">[[${list.discountRate}]]%</span>
+                        </th:block>
+
+                        <span class="product-real-price-text" th:text="${#numbers.formatDecimal(list.discountPrice, 0, 'COMMA', -1, 'POINT')} + '원'"></span>
+                        <p class="review-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-dots" viewBox="0 0 16 16" style="margin-right: 6px">
+                            <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
+                            <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg>[[${list.reviewCount}]]+</p>
+                    </div>
+                </a>
+            </li>
+        </th:block>
+    </ul>
+</div>
+
+    <!--페이지네이션 라인-->
+    <nav aria-label="Page navigation example" class="pagination-box">
+        <ul class="pagination">
+            <li class="page-item" th:if="${ph.prev}">
+                <a class="page-link" aria-label="Previous" th:href="@{/product/list(pageNo=${ph.startPage-1},qty=${ph.pgvo.qty}, type=${ph.pgvo.type}, category=${ph.pgvo.category},categoryDetail=${ph.pgvo.categoryDetail},subType=${ph.pgvo.subType},search=${ph.pgvo.search})}">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+
+            <th:block th:if="${ph.totalCount ne 0}">
+                <th:block th:each="i: ${#numbers.sequence(ph.startPage,ph.endPage)}">
+                    <li class="page-item" th:classappend="${ph.pgvo.pageNo == i ?'active':''}" aria-current="page">
+                        <a class="page-link" th:href="@{/product/list(pageNo=${i},qty=${ph.pgvo.qty},type=${ph.pgvo.type},category=${ph.pgvo.category},categoryDetail=${ph.pgvo.categoryDetail},subType=${ph.pgvo.subType},search=${ph.pgvo.search})}">[[${i}]]</a>
+                    </li>
+                </th:block>
+            </th:block>
+
+            <li class="page-item" th:if="${ph.next}">
+                <a class="page-link" aria-label="Next" th:href="@{/product/list(pageNo=${ph.endPage+1},qty=${ph.pgvo.qty},type=${ph.pgvo.type}, category=${ph.pgvo.category},categoryDetail=${ph.pgvo.categoryDetail},subType=${ph.pgvo.subType},search=${ph.pgvo.search})}">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+<!--양쪽 배너-->
+<div class="memberShip" th:if="${session.mStatus == false or session == null or session.mStatus == null}">
+    <a href="#" id="membershipPayment">
+        <img th:src="@{/dist/image/banner_ad/membership_banner_ad.png}" id="memberShipImg" alt="">
+    </a>
+</div>
+<div class="rightBanner" id="rightBanner">
+    <a>
+        <img th:src="@{/dist/icon/cart.svg}" style="width: 30px; height: 30px;" id="bannerBasket">장바구니
+    </a>
+    <hr>
+    <a>
+        <img th:src="@{/dist/icon/heart.svg}" style="width: 28px; height: 28px;" id="bannerSlang">찜
+    </a>
+    <hr>
+    <a onclick="openPopup()">
+        <img th:src="@{/dist/icon/bot.png}" style="width: 30px; height: 30px;" id="bannerInquiry">채팅문의
+    </a>
+    <hr>
+    <div class="RecentlyViewed">
+        <p>최근 본 상품</p>
+        <div id="recentViewContainer"></div>
+    </div>
+</div>
+
+<script>
+    let url = location.href;
+    let decode = decodeURI(url);
+    const queryString = decode.split('?')[1];
+    const params = new URLSearchParams(queryString);
+    let searchVal = params.get('search');
+    const role = `[[${session.role}]]`;
+    let searchResultElement = document.getElementById('searchValPrint');
+    if (searchVal != null && (searchVal).length !== 0) {
+        searchResultElement.style.display = '';
+        searchResultElement.innerHTML = `"<span style="color: #f57700;">${searchVal}</span>"에 대한 검색결과`;
+    }
+</script>
+<script th:inline="javascript">
+    const customerId = [[${session.id}]];
+    const subType = [[${ph.pgvo.subType}]];
+    if(subType != null){
+        document.getElementById(subType).style.color = 'black';
+    }
+</script>
+<script th:src="@{/js/banner.js}"></script>
+<script th:src="@{/js/commonBasket.js}"></script>
+<script th:src="@{/js/popup.js}"></script>
+
+
+<script>
+    let value = null;
+    //멤버십결제 페이지 이동
+    document.getElementById('membershipPayment').addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        if (customerId == null) {
+            alert('로그인을 해주세요.');
+            return;
+        }
+
+
+        const merchantUid = 'merchant_uid' + new Date().getTime();//결제 고유Id
+
+        saveMembershipPaymentInfo(customerId, merchantUid).then(rsp => {
+
+            if (rsp === 'fail') { //사전검증 데이터 등록 안되었을 경우
+                alert('오류가 발생했습니다.\n잠시후 다시 시도해주세요.');
+                return;
+            }
+
+
+            localStorage.setItem('merchantUid', merchantUid); //스토리지에 저장하여 숨겨서 이동
+
+            const popupWidth = 910;
+            const popupHeight = 700;
+            const leftPosition = (screen.width - popupWidth) / 2;
+            const topPosition = (screen.height - popupHeight) / 2 - 50; // 살짝 위에 위치하도록 조정
+            const url = '/payment/memberShipPaymentPopup';
+            const popupFeatures = 'width=' + popupWidth + ',height=' + popupHeight + ',left=' + leftPosition + ',top=' + topPosition;
+
+            window.open(url, '_blank', popupFeatures);
+        });
+
+    });
+
+    //사전검증을 위해 미리 결제 데이터 저장하기
+    async function saveMembershipPaymentInfo(customerId, merchantUid) {
+
+        const data = {
+            merchantUid: merchantUid,
+            customerId: customerId
+        }
+
+        try {
+            const url = '/payment/saveMembershipPaymentInfo';
+            const config = {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json; charset =utf-8'
+                },
+                body: JSON.stringify(data)
+            }
+            const req = await fetch(url, config);
+            const rsp = await req.text();
+            return rsp;
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+</script>
+<script src="/js/sidebar.js"></script>
+</body>
+<th:block th:replace="~{footer :: footer}"></th:block>
+
+</html>

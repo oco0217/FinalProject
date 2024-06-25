@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.www.repository.NoticeMapper">
+<insert id="register">
+    insert into notice(title,content)
+    values (#{title}, #{content})
+</insert>
+
+    <select id="getList" resultType="com.project.www.domain.NoticeVO">
+        select * from notice
+        order by id desc
+        limit #{pageStart}, #{pageSize}
+    </select>
+
+    <select id="getDetail" resultType="com.project.www.domain.NoticeVO">
+        select * from notice
+        where
+        id = #{id}
+    </select>
+
+    <update id="modify">
+        update notice
+        set
+        title=#{title}, content=#{content}, register_date = now()
+        where id = #{id}
+    </update>
+
+    <delete id="remove">
+        delete from notice where id = #{id}
+    </delete>
+
+    <select id="getTotal" resultType="int">
+        SELECT count(id) from notice
+    </select>
+</mapper>
