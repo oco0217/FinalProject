@@ -14,6 +14,7 @@
 
 ###  2.[상품](#product-anchor)
  #### - [찜하기](#product-pick-anchor)
+ #### - [수량변경](#product-changeQuantity-anchor)
   
 ### 장바구니
   ####  - 추가
@@ -91,10 +92,94 @@
 #### 찜하기
 
 
+비로그인시 찜하기를 할 수 없습니다.
+
+
+![image](https://github.com/user-attachments/assets/58942eac-8615-4a0a-af9e-2ee49c55beb6)
+
+
+
 상품 상세페이지에 찜하기(하트 아이콘)를 클릭 시 찜하기를 할 수 있습니다.
 
 
 ![image](https://github.com/user-attachments/assets/a329685a-bbf9-41da-b820-0d685d46736e)
+
+
+찜한상품을 다시 누를 시 찜한 상품이 삭제 됩니다.
+
+
+![image](https://github.com/user-attachments/assets/08dd2f46-a707-40ca-8fb7-0dfcaf08defc)
+
+
+
+내가 찜한상품은 마이페이지 -> 찜한상품 에서 확인이 가능하며 찜한 상품을 마이페이지에서도 찜한상품을 삭제하실 수 있습니다.
+
+![image](https://github.com/user-attachments/assets/4a23c7f2-9fb6-4dee-897c-806c77c2b295)
+
+
+<a name="product-changeQuantity-anchor"></a>
+#### 수량변경
+
+수량은 1이상만 주문이 가능합니다.
+
+
+![image](https://github.com/user-attachments/assets/5534494a-f3be-4f3e-904e-eb7c5b0bb235)
+
+주문 또는 장바구니에 담을 수량을 - + 로 조절이 가능합니다.
+
+
+![image](https://github.com/user-attachments/assets/0e68605e-9382-49d0-a6f9-44dbb9e34abe)
+
+
+주문, 장바구니를 클릭 시 비동기로 DB에 현재 상품의 수량을 체크하여 잔여수량보다 주문수량이 많거나 재고가 없을 시에 alert창으로 다음으로 못넘어가게 막습니다.
+
+
+![image](https://github.com/user-attachments/assets/49be2520-39c2-4b65-8773-b9cd1c2eaa80)
+
+
+![image](https://github.com/user-attachments/assets/d712bafe-abdf-499f-ac5b-ad38f14e29e0)
+
+
+
+주문 또는 장바구니에 담을 상품의 수량이 품절일 경우 (total_qty == 0) 주문이나 장바구니에 담지 못합니다.
+
+
+![image](https://github.com/user-attachments/assets/3c53d738-2a8f-4095-a41c-c565845192e7)
+
+
+![image](https://github.com/user-attachments/assets/34aa58c2-f502-435d-af65-0d9617d01e1f)
+
+
+주문 또는 장바구니에 담을 상품의 수량이 현재 상품의 잔여수량보다 많이 주문할 경우
+
+alert 창으로 현재남은 잔여수량에 대해 알려주고 주문할지 말지 결정할 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/ef19c3ab-1059-48d8-865f-aa589f03e543)
+
+
+![image](https://github.com/user-attachments/assets/06eafdc6-07a6-4504-94e2-ce55c14e570d)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
