@@ -9,7 +9,7 @@
 
 
  ### 1.[멤버쉽](#membership-anchor)
-  #### 가입(#membership-join-anchor)
+  #### [가입](#membership-join-anchor)
 ## 장바구니
   - 추가
  
