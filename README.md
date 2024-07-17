@@ -1,4 +1,4 @@
-
+![image](https://github.com/user-attachments/assets/625e3163-384b-41b0-9518-faaf47d0703f)
 프로젝트명 : 미드나잇마켓 (온라인 쇼핑몰)
 ========================================
 
@@ -31,13 +31,13 @@
    #### - [자주 구매한 상품](#frequently-purchased-product-anchor)
    #### - [주문확정](#order-confirm-anchor)
    #### - [환불하기](#order-refund-anchor)
-   #### - 리뷰작성
+   #### - [리뷰작성](#review-anchor)
  
  
- ### 판매자
-  #### - 회원가입
-  #### - 상품등록
-  #### - 판매자 페이지
+ ### 6.[판매자](#seller-anchor)
+  #### - [회원가입](#seller-register-anchor)
+  #### - [상품등록](#seller-productRegister-anchor)
+  #### - [판매자 페이지](#sellerPage-anchor)
 
 
 # 내가 구현한 기능
@@ -400,6 +400,238 @@ alert 창으로 현재남은 잔여수량에 대해 알려주고 주문할지 �
 
 
 ![image](https://github.com/user-attachments/assets/34f31d42-70b9-4142-b77b-c7986828e7fa)
+
+
+<a name="review-anchor">
+ 
+### 리뷰작성
+
+배송이완료되고 주문확정을 하였을 경우 마이페이지 상품후기에 리뷰를 작성할 수 있습니다.
+
+- 글후기 50원
+
+- 사진후기 100원
+
+- 멤버쉽회원일 경우 포인트적립 2배 적용
+
+
+일반회원일 경우
+
+
+모달창으로 열리게 해놓았으며 후기에 별점을 부여할 수 있고 사진도 등록이 가능합니다.
+
+
+![image](https://github.com/user-attachments/assets/c240ec96-3859-4666-8413-a654be5ba2aa)
+
+
+![image](https://github.com/user-attachments/assets/0dcb19c4-235c-40b0-9e84-c7973c6ed1f3)
+
+
+후기를 작성하고 50포인트가 적립된것을 확인하실 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/29bba204-3290-4440-8cdd-47310e32d786)
+
+
+![image](https://github.com/user-attachments/assets/8405aacb-4b67-477e-9fd9-d0f943ac9722)
+
+
+![image](https://github.com/user-attachments/assets/d8243f4d-5ce7-4fdd-b047-0b946c162485)
+
+
+사진을 포함하여 후기를 남길 시 100포인트가 적립된것을 확인하실 수 있습니다.
+
+
+작성완료 후기에서 자신이 작성한 후기를 확인하실 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/febe00d1-1774-487a-9ce8-3ebb911ddfe4)
+
+
+멤버쉽 회원일 경우 멤버쉽 혜택으로 2배 적용되어 글 후기는 100원 사진후기는 200원이 적립이 됩니다.
+
+![image](https://github.com/user-attachments/assets/486bc46b-9af6-48d1-93c5-266a1c448c8b)
+
+
+![image](https://github.com/user-attachments/assets/abd01288-f222-41a7-88b3-528759928cd8)
+
+
+![image](https://github.com/user-attachments/assets/8a423678-3762-44cc-bf41-9b7269abcf6e)
+
+
+![image](https://github.com/user-attachments/assets/1acdfeaf-f520-41c9-b512-58e744b6e6c7)
+
+
+상품의 하단에 고객들이 적은 후기의 개수를 확인할 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/dffb4766-bbea-4170-a632-a7f4ad3543dc)
+
+
+상세페이지에서도 리뷰의 개수와 별점의 평균, 작성한 리뷰 목록을 확인할 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/7dbbaa82-36b4-4c42-9a26-3b501c17cd0e)
+
+
+![image](https://github.com/user-attachments/assets/7f518098-7b6e-4c6e-8757-b9d3a53fbf47)
+
+
+<a name="seller-anchor"></a>
+## 판매자
+
+<a name="seller-register-anchor"></a>
+### 회원가입
+
+우측에 회원가입을 누르면 개인회원가 사업자 회원으로 가입을 선택하실 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/5129dd96-e1a6-4b0a-966d-476569194b19)
+
+
+![image](https://github.com/user-attachments/assets/abc51a4d-5df9-4571-92e3-cadb92aa4c28)
+
+
+![image](https://github.com/user-attachments/assets/9e04d767-a2f2-4a23-982e-7ba5ee9a64cd)
+
+
+로그인시 고객, 판매자 중 선택하여 로그인 하실 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/ab5b82de-fb8e-48b6-a16b-8649ce28a712)
+
+
+![image](https://github.com/user-attachments/assets/e4aa2ba4-44b9-4ef3-8b45-9c2b39fb1979)
+
+
+<a name="seller-productRegister-anchor"></a>
+### 상품등록
+
+
+우측 상단 자신의 닉네임을 클릭하면 판매자페이지로 진입합니다.
+
+
+![image](https://github.com/user-attachments/assets/a8eec5b7-878b-4889-81a2-5a8ff659d323)
+
+
+우측 중간에 상품 등록하기를 클릭하면 상품등록 페이지로 이동하여 상품을 등록하실 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/5201218d-f8b7-4273-8104-72ac1ea0e653)
+
+
+![image](https://github.com/user-attachments/assets/737be582-5e05-42fd-8f9b-4bbe3198e67e)
+
+
+![image](https://github.com/user-attachments/assets/b40a73dd-45f4-4fd3-b47e-ffbdea9096d9)
+
+
+상품을 등록 시 고객들이 상품을 구매할 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/fdac0216-8ff0-47cf-b5c5-daa4a908a925)
+
+
+![image](https://github.com/user-attachments/assets/d86ee3c0-81a0-4aa0-b9ce-39003f2f9586)
+
+
+<a name="sellerPage-anchor"></a>
+### 판매자페이지
+
+
+상품의 기존가를 기존가 변경을 통해 변경하실 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/6b850c35-0936-4c80-b16d-7aec53560f6c)
+
+
+![image](https://github.com/user-attachments/assets/aa7a097c-ead2-4762-a9ca-66efc12731de)
+
+
+상품의 수량을 수량 추가를 통해 수량을 추가하실 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/5b0e48c7-efd7-44bc-bac7-b9bf6dd0abfa)
+
+
+![image](https://github.com/user-attachments/assets/6f8591f9-4ee5-490f-9985-bf0ecfbbc6fd)
+
+
+상품의 할인율을 할인율 변경을 통해 할일율을 조정하실 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/920e0454-0a22-4630-abf1-5a49ff8add7b)
+
+
+![image](https://github.com/user-attachments/assets/949cc081-259d-4afd-9c98-1de5d1e1d30e)
+
+
+고객이 해당 상품을 구매했을 경우 누적 판매량이 증가합니다.
+
+
+![image](https://github.com/user-attachments/assets/658186ee-cb16-49df-b8d0-07187bafc9cb)
+
+
+![Uploading image.png…]()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
