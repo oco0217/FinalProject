@@ -27,10 +27,10 @@
   #### - [포인트사용](#orders-point-anchor)
   #### - [결제](#orders-payment-anchor)
   
-  ### 마이페이지
-   #### - 자주 구매한 상품
-   #### - 주문확정
-   #### - 환불하기
+  ### 5.[마이페이지](#myPage-anchor)
+   #### - [자주 구매한 상품](#frequently-purchased-product-anchor)
+   #### - [주문확정](#order-confirm-anchor)
+   #### - [환불하기](#order-refund-anchor)
    #### - 리뷰작성
  
  
@@ -332,6 +332,106 @@ alert 창으로 현재남은 잔여수량에 대해 알려주고 주문할지 �
 
 
 ![image](https://github.com/user-attachments/assets/239a68eb-fc9e-46f0-bb7e-d627eea0bf9c)
+
+
+<a name="myPage-anchor"></a>
+## 마이페이지
+
+<a name="frequently-purchased-product-anchor"></a>
+### 자주 구매한 상품
+
+
+마이페이지에서 자신이 자주 구매한 상품을 top5로 확인하실 수 있습니다.
+
+![image](https://github.com/user-attachments/assets/416dda48-8076-4324-bffa-ce273f0f4ba0)
+
+
+![image](https://github.com/user-attachments/assets/6bd0ddd6-03cd-4c43-b50e-f00e1d1694b5)
+
+
+<a name="order-confirm-anchor"></a>
+### 주문확정
+
+
+주문확정을 하실 경우
+
+일반회원 - 구매금액의 1% 포인트 적립
+
+멤버쉽회원 - 구매금액의 5% 포인트 적립
+
+
+주문확정을 하면 제품의 문제가 있지않고 단순 변심의 경우 환불이 불가능합니다.
+
+
+ - 일반회원일 경우
+
+![image](https://github.com/user-attachments/assets/f6d305c8-ca66-4c7b-9c8d-2140cc03fc85)
+
+
+![image](https://github.com/user-attachments/assets/fc60ceda-64f6-418c-bf1b-125c7582b35d)
+
+
+![image](https://github.com/user-attachments/assets/9da40e98-26ac-4899-b9e4-78a146548a17)
+
+
+ - 멤버쉽 회원일 경우
+
+
+![image](https://github.com/user-attachments/assets/768a2e8a-e000-4c09-8c42-30c45f9cbfef)
+
+
+![image](https://github.com/user-attachments/assets/65b59e00-bae4-41ea-b34c-32dd009445e7)
+
+
+![image](https://github.com/user-attachments/assets/b76a5874-812b-45f8-96fd-d198cfaeb95f)
+
+
+<a name="order-refund-anchor">
+ 
+### 환불하기
+
+환불하기 버튼을 눌렀을 경우에는 구매한 금액과 사용한쿠폰+포인트 금액을 환불 받을 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/903a2b77-762d-4f92-be29-4f6010b82732)
+
+
+![image](https://github.com/user-attachments/assets/80dc11e3-d5a3-4cb2-a497-2a4733d982c7)
+
+
+![image](https://github.com/user-attachments/assets/34f31d42-70b9-4142-b77b-c7986828e7fa)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
