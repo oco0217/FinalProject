@@ -21,13 +21,23 @@
   ####  - [수량변경](#basket-changeQuantity-anchor)
   ####  - [삭제](#basket-delete-anchor)
   
-  ### 판매자
- 
+  ### 4.[주문서](#orders-anchor)
+  #### - [주문](#order-anchor)
+  #### - [쿠폰사용](#orders-coupon-anchor)
+  #### - [포인트사용](#orders-point-anchor)
+  #### - [결제](#orders-payment-anchor)
   
-  ### 상품 후기
+  ### 마이페이지
+   #### - 자주 구매한 상품
+   #### - 주문확정
+   #### - 환불하기
+   #### - 리뷰작성
  
  
- ### 주문서
+ ### 판매자
+  #### - 회원가입
+  #### - 상품등록
+  #### - 판매자 페이지
 
 
 # 내가 구현한 기능
@@ -194,8 +204,178 @@ alert 창으로 현재남은 잔여수량에 대해 알려주고 주문할지 �
 ### 수량변경
 
 
+수량을 - + 로 장바구니로 주문할 수량을 변경할 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/78ac840f-2cae-4555-8d05-df896bf32bd3)
+
+
+장바구니에 담긴 수량이 현재 상품의 잔여수량보다 많을 경우 장바구니 주문을 막고 현재 상품의 최대 수량만큼 변경이 됩니다.
+
+
+![image](https://github.com/user-attachments/assets/f9d634ff-df77-4f63-a316-d690c947409a)
+
+
+![image](https://github.com/user-attachments/assets/097947f0-a023-4d66-923f-8e7195928d13)
+
+
+유기농 양파의 수량이 변경된 것을 확인하실 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/a9bb8286-fd50-493c-a68f-c1ae6f8f7a93)
+
+
 <a name="basket-delete-anchor"></a>
 ### 삭제
+
+
+상품의 좌측에 체크박스를 통하여 자기가 원하는 상품들만 주문하거나 삭제를 할 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/f68aa6f2-374e-40ec-b683-8d226d86bfe4)
+
+
+<a name="orders-anchor"></a>
+## 주문서
+<a name="order-anchor"></a>
+### 주문
+
+상품 상세페이지 또는 장바구니에서 주문을 하실 수 있습니다.
+
+![image](https://github.com/user-attachments/assets/1d1eb79f-d7f0-41cb-b4e1-e52214f03b1d)
+
+
+아코디언을 통해 자신이 주문할 상품들의 정보를 열고 닫을 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/34f07444-c0d8-48ef-b346-7536396b5e60)
+
+
+![image](https://github.com/user-attachments/assets/0dbd6d58-a581-40ac-9fc0-23e66d18a1b7)
+
+
+<a name="orders-coupon-anchor"></a>
+### 쿠폰사용
+
+
+쿠폰선택을 눌러 쿠폰을 사용할 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/402593f7-227e-45b3-9b06-a8bd72c98042)
+
+
+![image](https://github.com/user-attachments/assets/238f1448-d575-4f7d-9f64-269c5245bb60)
+
+
+쿠폰을 사용하면 쿠폰의 금액만큼 최종 결제금액이 할인됩니다.
+
+
+![image](https://github.com/user-attachments/assets/a125715c-8802-4f7a-928a-ef0cb84e9e29)
+
+
+<a name="orders-point-anchor"></a>
+### 포인트사용
+
+
+현재 보유한 포인트를 사용할 수 있습니다. 모두사용을 누를경우 사용가능 포인트를 모두 사용할 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/e737d504-92b5-4dbc-a5f0-b9f5f9306857)
+
+
+![image](https://github.com/user-attachments/assets/39d2f90b-fc24-45ad-99d4-fe197e349dc4)
+
+
+<a name="orders-payment-anchor"></a>
+### 결제
+
+
+결제는 포트원 API를 사용하였고 PG사는 KG이니시스를 활용하였습니다.
+
+
+![image](https://github.com/user-attachments/assets/afd490ab-546a-4e22-ae7a-3d81f40259b8)
+
+
+사전검증 사후검증을 통하여 금액을 변조하여 결제의 악용을 차단하였습니다.
+
+
+![image](https://github.com/user-attachments/assets/a50beefc-a14f-4cc9-aa68-9ffcf519a178)
+
+
+![image](https://github.com/user-attachments/assets/99f49f2b-62e5-432a-ae28-6a653e09018d)
+
+
+ 미리 결제할 가격을 포트원에 보내어 사전에 등록을 하여 결제창 진입시 사전에 등록한 금액과 일치하는지 확인합니다.
+
+
+![image](https://github.com/user-attachments/assets/38ea339f-8372-4261-8b46-d2b9b10c29fb)
+
+
+![image](https://github.com/user-attachments/assets/e675c2e4-36b2-4aa3-9a4b-4d06aa6618a3)
+
+
+결제를 완료후 한번더 검증을 통하여 결제한 금액과 일치하는지 확인 후 일치하지 않다면 결제를 취소하여 사후검증을 합니다.
+
+
+![image](https://github.com/user-attachments/assets/deba049c-1cda-489c-aa5f-41a38f4869ea)
+
+
+결제를 성공하였을 경우 주문내역을 마이페이지에서 확인하실 수 있습니다.
+
+주문확정을 할 경우 포인트를 적립할 수 있습니다.
+
+
+![image](https://github.com/user-attachments/assets/9318d8b9-1904-4b3e-bc7e-d5777254f172)
+
+
+![image](https://github.com/user-attachments/assets/bbab998f-02cc-4cd3-919c-beb6d0c06f7e)
+
+
+![image](https://github.com/user-attachments/assets/239a68eb-fc9e-46f0-bb7e-d627eea0bf9c)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
