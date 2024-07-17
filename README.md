@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/625e3163-384b-41b0-9518-faaf47d0703f)
+
 프로젝트명 : 미드나잇마켓 (온라인 쇼핑몰)
 ========================================
 
@@ -572,7 +572,8 @@ alert 창으로 현재남은 잔여수량에 대해 알려주고 주문할지 �
 ![image](https://github.com/user-attachments/assets/658186ee-cb16-49df-b8d0-07187bafc9cb)
 
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/b85c9fef-c58e-4b97-afc5-a3e4d6b3dd9a)
+
 
 
 
