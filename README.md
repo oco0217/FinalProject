@@ -191,11 +191,11 @@ alert 창으로 현재남은 잔여수량에 대해 알려주고 주문할지 �
 
 
 <a name="basket-changeQuantity-anchor"></a>
-###수량변경
+### 수량변경
 
 
 <a name="basket-delete-anchor"></a>
-###삭제
+### 삭제
 
 
 
